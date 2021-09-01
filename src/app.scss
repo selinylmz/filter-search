@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 10px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #dddd;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  order: 1;
+  @media (min-width: 992px) {
+    order: 0;
+    width: 300px;
+  }
+  > * {
+    margin-bottom: 10px;
+  }
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media (min-width: 992px) {
+    padding: 15px;
+    width: calc(100% - 300px);
+  }
+}
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #dddd;
+  padding: 15px;
+  > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+}
+.list {
+  margin-top: 15px;
+  border: 1px solid #dddd;
+  padding: 15px;
+  flex: 1;
+  &__item {
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+input,
+select,
+button {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #dddd;
+  height: 40px;
+  border-radius: 4px;
+  min-width: 250px;
+  width: 100%;
+  @media (min-width: 992px) {
+    width: auto;
+  }
+}
+button {
+  &:hover {
+    background-color: #aaa;
+  }
+}
